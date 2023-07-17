@@ -22,7 +22,7 @@ body {
     line-height: 1.5;
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 400;
-    background-color: #fff;
+    background-color: #222;
     color: #222;
 }
 
@@ -30,6 +30,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+*:focus {
+    outline: 2px dashed #1E90FF;
+    outline-offset: 2px;
+}
+
 
 /* CONTAINER */
 
@@ -129,24 +135,12 @@ main {
 }
 
 
-/* RETINA-BG */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-    .hero {
-        background-image: url("../img/main-font.jpg");
-    }
-}
-
 /* LATEST-VIDEOS */
 .latest-videos {
     width: 100%;
     max-width: 600px;
     padding: 54px;
+    background-color: #fff;
 }
 
 .latest-videos-heading {
@@ -179,3 +173,118 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 10px;
 }
 
+
+/* ITEM-LATEST-VIDEOS */
+.item-latest-videos {
+    display: flex;
+}
+
+.item-latest-videos-img {
+    width: 160px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.item-latest-videos-info {
+    padding: 16px;
+}
+
+.item-latest-videos-heading {
+    margin-top: 0;
+    font-family: "Bebas Neus", "Open Sans Condensed", "Arial", sans-serif;
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.item-latest-videos-link {
+    display: inline-block;
+    color: #222;
+    text-decoration: none;
+}
+
+.item-latest-videos-link:hover {
+    color: #1E90FF;
+}
+
+.item-latest-videos-link:active {
+    opacity: 0.6;
+}
+
+.item-latest-videos-meta {
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.item-latest-videos-meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.item-latest-videos-meta-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.item-latest-videos-meta-item::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    content: "";
+}
+
+.item-latest-videos-meta-published-at::before {
+    background-image: url("../img/clock1.svg")
+}
+
+.item-latest-videos-meta-views::before {
+    background-image: url("../img/eyes.svg")
+}
+
+
+/* BUTTON */
+.load-more-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    background-color: #1E90FF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.load-more-button:hover {
+    background-color: rgba(30, 144, 255, 0.80);
+}
+
+.load-more-button:active {
+    background-color: rgba(30, 144, 255, 0.60);
+}
+
+
+/* RETINA-BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .hero {
+        background-image: url("../img/main-font@2x.jpg");
+    }
+}
